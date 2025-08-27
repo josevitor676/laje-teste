@@ -1,0 +1,134 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.fontSize": 13,
+  "editor.letterSpacing": 1,
+  "editor.lineHeight": 2,
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "extensions.ignoreRecommendations": true,
+  "typescript.tsserver.log": "off",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "files.associations": {
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    "*.css": "css"
+  },
+  "symbols.files.associations": {
+    "*.module.ts": "nest",
+    "*.guard.ts": "typescript",
+    "*.spec.ts": "ts-test",
+    "*.service.ts": "typescript",
+    "*.e2e-spec.ts": "ts-test",
+    "vitest.config.e2e.ts": "vitest",
+    ".env.example": "gear"
+  },
+  "editor.parameterHints.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
+  "explorer.confirmDelete": false,
+  "[prisma]": {
+    "editor.formatOnSave": true
+  },
+  "typescript.suggest.autoImports": true,
+  "workbench.editor.labelFormat": "short",
+  "editor.fontLigatures": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "explorer.compactFolders": true,
+  "git.enableSmartCommit": true,
+  "editor.accessibilitySupport": "off",
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.semanticHighlighting.enabled": false,
+  "workbench.productIconTheme": "fluent-icons",
+  // "editor.fontFamily": "MonoLisa Trial",
+  // "editor.fontFamily": "'Anonymous Pro', Consolas",
+  // "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "SF Mono",
+  // "editor.fontFamily": "MonoLisa Trial",
+  "editor.tabSize": 2,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "files.exclude": {
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/.git": true
+  },
+  "update.mode": "start",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.commandCenter": true,
+  "git.openRepositoryInParentFolders": "always",
+  "symbols.hidesExplorerArrows": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "update.showReleaseNotes": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "explorer.sortOrder": "foldersNestsFiles",
+  // "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "left",
+  "workbench.iconTheme": "symbols",
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 11,
+      "y": 10
+    },
+    "frame": true
+  },
+  "apc.header": {
+    "height": 34
+  },
+  "apc.listRow": {
+    "height": 24
+  },
+  "apc.font.family": "SF Mono",
+  "apc.stylesheet": {
+    ".title-label > h2": "display: flex",
+    ".nosidebar .inline-tabs-placeholder": "width: 75px",
+    ".pane-header": "padding: 0 8px",
+    ".pane-body": "padding: 8px",
+    ".split-view-view:first-child .pane-header": "display: none !important;",
+    ".monaco-list-row": "border-radius: 4px;",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
+  },
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "GitHub Dark Default",
+  "redhat.telemetry.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "java.editor.reloadChangedSources": "auto",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "window.customTitleBarVisibility": "auto",
+  "window.titleBarStyle": "custom",
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "editor.minimap.enabled": false
+}
