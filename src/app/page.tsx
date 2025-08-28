@@ -17,15 +17,15 @@ export default function HomePage() {
     setValues(data);
   };
 
-  // cálculos
-  const barrasX = Math.floor(values.largura / values.espacamento);
-  const barrasY = Math.floor(values.comprimento / values.espacamento);
+  const numFerrosX = Math.floor(values.largura / values.espacamento);
+  const numFerrosY = Math.floor(values.comprimento / values.espacamento);
 
-  const totalFerros = barrasX + barrasY;
-  const comprimentoTotal =
-    barrasX * values.comprimento + barrasY * values.largura;
+  const totalComprimentoFerrosX = numFerrosX * values.comprimento;
+  const totalComprimentoFerrosY = numFerrosY * values.largura;
 
-  // peso por metro conforme bitola
+  const totalFerros = numFerrosX + numFerrosY;
+  const comprimentoTotal = totalComprimentoFerrosX + totalComprimentoFerrosY;
+
   const tabelaPeso: Record<string, number> = {
     "8": 0.395,
     "10": 0.617,
@@ -35,21 +35,32 @@ export default function HomePage() {
   const pesoTotal = comprimentoTotal * tabelaPeso[values.bitola];
 
   return (
-    <div className="flex h-screen w-full justify-between items-center">
-      <div>
-        <h1 className="text-2xl font-bold mb-4">Cálculo de Laje Lisa</h1>
+    <div className="flex h-screen w-full flex-col lg:flex-row p-4 lg:p-8">
+      <div className="flex w-full lg:w-1/3 flex-col items-center justify-center p-4">
+        <h1 className="text-2xl font-bold mb-4 text-gray-800">Cálculo de Laje Lisa</h1>
         <LajeForm onSubmit={handleFormSubmit} />
 
-        <div className="mt-4 space-y-1 h-full">
-          <p><strong>Barras no sentido X:</strong> {barrasX}</p>
-          <p><strong>Barras no sentido Y:</strong> {barrasY}</p>
-          <p><strong>Total de Ferros:</strong> {totalFerros}</p>
-          <p><strong>Comprimento total:</strong> {comprimentoTotal.toFixed(2)} m</p>
-          <p><strong>Peso total:</strong> {pesoTotal.toFixed(2)} kg</p>
+        <div className="mt-8 space-y-2 text-gray-700 text-center lg:text-left">
+          <h2 className="text-xl font-semibold">Informações de Cálculo</h2>
+          <p className="text-lg">
+            <strong>Barras no sentido X:</strong> {numFerrosX}
+          </p>
+          <p className="text-lg">
+            <strong>Barras no sentido Y:</strong> {numFerrosY}
+          </p>
+          <p className="text-lg">
+            <strong>Total de Barras:</strong> {totalFerros}
+          </p>
+          <p className="text-lg">
+            <strong>Comprimento total:</strong> {comprimentoTotal.toFixed(2)} m
+          </p>
+          <p className="text-lg">
+            <strong>Peso total:</strong> {pesoTotal.toFixed(2)} kg
+          </p>
         </div>
       </div>
 
-      <div className="flex w-full h-full justify-center items-center">
+      <div className="flex w-full lg:w-2/3 h-1/2 lg:h-full justify-center items-center mt-8 lg:mt-0">
         <Laje3D {...values} />
       </div>
     </div>
