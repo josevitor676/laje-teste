@@ -44,13 +44,13 @@ export function Laje3D({
 
   return (
     <div
-      className="w-full h-full bg-white rounded-xl shadow-md p-4 flex flex-col  mx-2"
+      className="w-full h-full flex-1 bg-white rounded-xl shadow-md p-4 flex flex-col mx-2"
     >
       <div className="flex flex-row gap-4 text-gray-700 font-bold text-2xl items-start">
         <Layers className="w-10 h-10 text-purple-600" />
         Visualização 3D
       </div>
-      <Canvas camera={{ position: [comprimento, largura, comprimento * 1.5], fov: 50 }}>
+      <Canvas className="w-full h-full" camera={{ position: [comprimento, largura, comprimento * 1.5], fov: 50 }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[comprimento, largura, 5]} intensity={1} />
         <OrbitControls />

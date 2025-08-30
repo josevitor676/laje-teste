@@ -34,9 +34,9 @@ export function LajeForm({ onSubmit }: LajeFormProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 w-full">
-      <div className="flex flex-col w-full p-4 bg-white rounded-lg shadow-md space-y-2">
-        <div className="flex items-center gap-2 text-xl text-gray-600 font-semibold">
-          <Ruler className="w-7 h-7 text-blue-600" />
+      <div className="flex flex-col w-full p-3 bg-white rounded-lg shadow-md space-y-2">
+        <div className="flex items-center gap-2 text-lg text-gray-600 font-semibold">
+          <Ruler className="w-6 h-6 text-blue-600" />
           Dimensões da Laje
         </div>
 
@@ -74,9 +74,9 @@ export function LajeForm({ onSubmit }: LajeFormProps) {
         {errors.espessura && <span className="text-red-500 text-xs">{errors.espessura.message}</span>}
       </div>
 
-      <div className="flex flex-col w-full p-4 bg-white rounded-lg shadow-md space-y-2 gap-2">
-        <div className="flex items-center gap-2 text-xl text-gray-600 font-semibold">
-          <Grid3X3 className="w-7 h-7 text-blue-600" />
+      <div className="flex flex-col w-full p-3 bg-white rounded-lg shadow-md space-y-2">
+        <div className="flex items-center gap-2 text-lg text-gray-600 font-semibold">
+          <Grid3X3 className="w-6 h-6 text-blue-600" />
           Configuração das Barras
         </div>
 
@@ -107,7 +107,7 @@ export function LajeForm({ onSubmit }: LajeFormProps) {
 
       <button
         type="submit"
-        className="mt-4 w-full h-12 text-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg rounded-lg flex items-center justify-center text-white"
+        className="mt-2 w-full h-10 text-base font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg rounded-lg flex items-center justify-center text-white"
       >
         <Calculator className="w-5 h-5 mr-2" />
         Calcular

@@ -51,13 +51,13 @@ export default function HomePage() {
   };
 
   return (
-    <div className={`flex min-h-screen w-full flex-col ${values && "justify-between"} bg-gradient-to-br from-blue-50 via-white to-indigo-50`}>
+    <div className={`flex min-h-screen w-full flex-col  bg-gradient-to-br from-blue-50 via-white to-indigo-50`}>
       <div className="text-center p-3">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="p-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl text-white">
-            <Calculator className="w-8 h-8" />
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="p-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl text-white">
+            <Calculator className="w-7 h-7" />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Calculadora de Laje Lisa
           </h1>
         </div>
@@ -66,50 +66,49 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-4 m-5">
-        <div className={`flex w-full lg:w-[35%] flex-col items-center justify-start ${!values && "mt-4"}`}>
+      <div className="flex flex-col lg:flex-row gap-3 mx-5">
+        <div className={`flex w-full lg:w-[35%] flex-col items-center justify-start ${!values && "mt-3"}`}>
           <LajeForm onSubmit={handleFormSubmit} />
 
-          {values && (
-            <div className="mt-4 flex flex-col w-full h-full p-4 bg-white rounded-lg shadow-md space-y-6 justify-between">
-              <div className="flex flex-row gap-2 justify-center items-center mb-2">
-                <BarChart3 className="w-7 h-7 text-blue-600" />
-                <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Resultados do Cálculo</h2>
+          <div className="mt-2 flex flex-col w-full p-3 bg-white rounded-lg shadow-md space-y-2 justify-between">
+            <div className="flex flex-row gap-2 justify-center items-center">
+              <BarChart3 className="w-5 h-5 text-blue-600" />
+              <h2 className="text-base font-semibold text-blue-600">Resultados do Cálculo</h2>
+            </div>
+
+            <div className="flex flex-col sm:flex-row justify-between gap-2">
+              <div className="flex flex-row items-center gap-2 text-base">
+                <Layers className="w-5 h-5 text-blue-600" />
+                <strong className="text-gray-500 ">Barras no sentido X: {numFerrosX}</strong>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-between mt-2 gap-2">
-                <div className="flex flex-row gap-2 items-center">
-                  <Layers className="w-6 h-6 text-blue-600" />
-                  <strong className="text-gray-500 text-base sm:text-lg">Barras no sentido X: {numFerrosX}</strong>
-                </div>
-
-                <div className="flex flex-row gap-2 items-center">
-                  <Layers className="w-6 h-6 text-blue-600" />
-                  <strong className="text-gray-500 text-base sm:text-lg">Barras no sentido Y: {numFerrosY}</strong>
-                </div>
+              <div className="flex flex-row2 items-center gap-2">
+                <Layers className="w-5 h-5 text-blue-600" />
+                <strong className="text-gray-500 text-base">Barras no sentido Y: {numFerrosY}</strong>
               </div>
+            </div>
 
-              <div className="flex flex-col sm:flex-row justify-between gap-2">
-                <div className="flex flex-row gap-2 items-center">
-                  <Grid3X3 className="w-6 h-6 text-purple-600" />
-                  <strong className="text-gray-500">Total de Barras: {totalFerros}</strong>
-                </div>
-
-                <div className="flex flex-row gap-2 items-center">
-                  <Ruler className="w-6 h-6 text-orange-600" />
-                  <strong className="text-gray-500">Comprimento total: {comprimentoTotal.toFixed(2)} m</strong>
-                </div>
+            <div className="flex flex-col sm:flex-row justify-between gap-2">
+              <div className="flex flex-row gap-2 items-center">
+                <Grid3X3 className="w-5 h-5 text-purple-600" />
+                <strong className="text-gray-500 text-base">Total de Barras: {totalFerros}</strong>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
-                <Weight className="w-6 h-6 text-red-600" />
-                <strong className="text-gray-500">Peso total: {pesoTotal.toFixed(2)} kg</strong>
+                <Ruler className="w-5 h-5 text-orange-600" />
+                <strong className="text-gray-500 text-md">Comprimento total: {comprimentoTotal.toFixed(2)} m</strong>
               </div>
             </div>
-          )}
+
+            <div className="flex flex-row gap-2 items-center">
+              <Weight className="w-5 h-5 text-red-600" />
+              <strong className="text-gray-500 text-md">Peso total: {pesoTotal.toFixed(2)} kg</strong>
+            </div>
+          </div>
+
         </div>
 
-        <div className="flex w-full lg:w-[65%] h-[400px] lg:h-auto justify-center items-center mt-6 lg:mt-0">
+        <div className="flex w-full lg:w-[65%] lg:h-auto justify-center items-center mt-6 lg:mt-0">
           {values && <Laje3D {...values} />}
         </div>
       </div>
